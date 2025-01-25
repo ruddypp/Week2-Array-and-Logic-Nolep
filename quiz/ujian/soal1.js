@@ -15,7 +15,11 @@ for (let i = 0; i < arr.length; i++){
 }   
 
 }
-return jarak === Infinity ? 0 : jarak;
+if( jarak === Infinity){
+    return 0;
+}else{
+    return jarak
+} 
 }
 // TEST CASES
 console.log(targetTerdekat([' ', ' ', 'o', ' ', ' ', 'x', ' ', 'x'])); // 3

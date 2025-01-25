@@ -8,6 +8,17 @@ Contoh jika arr inputan adalah [45, 20, 21, 2, 7] maka output: [ [ 20, 2 ], [ 7 
 */
 function mengelompokkanAngka(arr) {
   // you can only write your code here!
+   let result = [[], [], []];
+   for(let i = 0; i < arr.length; i++){
+       if(arr[i] % 2 === 0 && arr[i] % 3 !== 0){
+           result[0].push(arr[i]);
+       }else if(arr[i] % 2 !== 0 && arr[i] % 3 !== 0){
+           result[1].push(arr[i]);
+       } else if(arr[i] % 3 === 0){
+           result[2].push(arr[i]);
+       }
+   }
+   return result;    
 }
 
 // TEST CASES
